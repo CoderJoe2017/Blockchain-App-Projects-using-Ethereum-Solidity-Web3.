@@ -1,0 +1,14 @@
+{
+    "name": "Blockchain_App",
+    "version": "1.0.0",
+    "main": "app.js",
+    "license": "MIT",
+    "scripts": {
+        "start": "node app.js"
+    },
+    "dependencies": {
+        "ajax": "0.0.4",
+        "express": "^4.16.2",
+        "web3": "^0.20.4"
+    }
+}

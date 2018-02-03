@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>CoderJoe Dapp</title>
+    <link rel="icon" href="/public/cjicon.ico">
+</head>
+<body>
+   <h1 id="response">Click button to check Public Key</h1>
+   <button onclick="contactServer()">Connect to the Blockchain</button>
+
+    <script>
+    function contactServer() {
+      var xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+         var accounts = JSON.parse(this.responseText);
+         document.getElementById("response").innerHTML = accounts[3];
+        }
+       };
+        xhttp.open("GET", "ajax-request", true);
+        xhttp.send();
+    }
+    </script>
+</body>
+</html>
